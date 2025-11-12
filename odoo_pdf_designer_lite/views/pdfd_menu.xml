@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <!-- Define the action FIRST -->
+  <record id="action_pdfd_templates" model="ir.actions.act_window">
+    <field name="name">PDF Templates</field>
+    <field name="res_model">pdfd.template</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <!-- Then the menus that reference it -->
+  <menuitem id="menu_pdfd_root" name="PDF Designer" sequence="10"/>
+  <menuitem id="menu_pdfd_templates" name="Templates"
+            parent="menu_pdfd_root"
+            action="odoo_pdf_designer_lite.action_pdfd_templates"/>
+</odoo>
